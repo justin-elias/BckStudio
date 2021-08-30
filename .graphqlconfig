@@ -1,0 +1,16 @@
+{
+  "name": "Master-BckStudio-GraphCMS",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Master-Production Endpoint": {
+        "url": "https://api-us-west-2.graphcms.com/v2/ckbza8udm06rc01xzdy4w7u6a/master",
+        "headers": {
+          "user-agent": "JS GraphQL",
+          "Authorization": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE1OTMzNjQ3MDksImF1ZCI6WyJodHRwczovL2FwaS11cy13ZXN0LTIuZ3JhcGhjbXMuY29tL3YyL2NrYnphOHVkbTA2cmMwMXh6ZHk0dzd1NmEvbWFzdGVyIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiMWY2NTc5YjctYTMwOS00MDBjLTkyZDctMjA0YTYxMGEyOGJiIiwianRpIjoiY2tiemM3aWNyMDYxbTAxejZoZ215YXN6ciJ9.qawAmOwFsAaxPgwifAkKyUs_RX2t0LgDROgC-E1LdmfsP2keO6YjE1soS1OTLH7csb2H7rMttqKbm5SSbVzP_DPnemtMl7PVK4jtoF1huYmB15TQsvG3yruQ-6ih-T8B5-3dOzVIGax_onAbTQGXiEYDStl1XhC_pxTfMhDTTJdUo8Ngu69nAu33Rg8MkCFeakuOd5KqLaNWkT8J63meFHbbyZZvRcnJDGLvsaNtcG0iQLXQQ6tBuiuONzuNEqu086K7ycMxkfEXYMRTcZnt6fpUHbxzdaXnKeHhqSfcEvWJGDuYS4-jBozuEKRThYQUrHVxc98YmjRL9raZ5d-7n0UA9YUAq_9XEypNS86M9OzUU1LhYsbDB8vL5HSnuEToUVSMa_0sjXuIk042G_2OqfBJ0xN7xVcItKow_L4Ai-uAjC_Gp08SvhieSMTPLzZy1WNdCwCAjONUX5c42N8fkfnAKFHXbEuBNBqA4kLi1rSHYezH-YaBTuXLqmQFHBsb0CX67Dn0i75wXLJbpOGuE1_2iw-fDkBVHL68DHTkrDutkfjyRaIcDlNK7R-2wRPF5P2zQFyejaQlH8hIR8gV8_1bCYnp7vheqtidSKA5yx3RwTNk6CIhXmLL4HzeJuOOMYTc8ckKU_v684U7IkjbZ1vf2PbmFsSXJyRRyr_vKak"
+        },
+        "introspect": true
+      }
+    }
+  }
+}
