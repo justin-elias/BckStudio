@@ -7,8 +7,9 @@
 import {AppProps} from "next/app"
 import {Event} from "@sentry/types"
 import {ReactNode} from "react";
-import firebase from "firebase/app"
-import {ButtonProps} from "@material-ui/core";
+import {ButtonProps} from "@mui/material/core";
+
+declare module 'classnames';
 
 export interface LogoButtonProps extends ButtonProps{
     width: string,
@@ -52,18 +53,18 @@ export interface BckAppProps extends AppProps {
     err: Event;
     children?: ReactNode;
     user?: BckUser;
-    logout?: firebase.auth.Auth;
     preview?: boolean;
+    whiteFont?: boolean;
 }
 
+export interface HeroImg {
+    src: string,
+    children?: ReactNode
+}
 export interface PricingProps extends BckAppProps{
     tierCategory: Map<MembershipTier>,
     title: string,
     maxWidth: "lg" | "sm",
-}
-
-export interface FirebaseUser extends firebase.User{
-    xa?: string,
 }
 
 export interface PreviewProps{

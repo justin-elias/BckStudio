@@ -9,6 +9,9 @@ const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = {
   reactStrictMode: true,
+  images: {
+        domains: ['media.graphcms.com'],
+    },
 };
 
 const sentryWebpackPluginOptions = {

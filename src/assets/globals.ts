@@ -180,12 +180,13 @@ const cardSubtitle = {
 
 const mainElement = {
   background: "#FFFFFF",
-  position: "relative",
+  //position: "relative",
   zIndex: "3",
   margin: "-3.75em 1.875em 0em",
   borderRadius: "0.375em",
   boxShadow: "0 1em 1.5em 0.125em rgba(0, 0, 0, 0.14), 0 0.375em 1.875em 0.313em rgba(0, 0, 0, 0.12), 0 0.5em 0.625em -0.313em rgba(0, 0, 0, 0.2)"
 };
+
 const playBrand = {
   color: theme.palette.primary.main,
 };
