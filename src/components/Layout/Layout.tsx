@@ -7,8 +7,8 @@ import {Hidden} from "@mui/material";
 // @ts-ignore
 import classNames from "classnames";
 // Children
-import HeaderSection from "./HeaderSection";
-import Footer from "./Footer";
+import HeaderSection from "./LayoutSections/HeaderSection";
+import Footer from "./LayoutSections/Footer";
 //Assets
 
 /* eslint-disable no-unused-vars */

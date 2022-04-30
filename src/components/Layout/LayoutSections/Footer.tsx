@@ -1,16 +1,16 @@
 // Core
 import React from "react";
-import {BckAppProps} from "../../index";
+import {BckAppProps} from "../../../index";
 // Styles
 import {makeStyles} from "@mui/styles";
 // @ts-ignore
 import classNames from "classnames";
-import {primaryColor} from "../../assets/theme";
-import {container} from "../../assets/globals";
+import {primaryColor} from "../../../assets/theme";
+import {container} from "../../../assets/globals";
 // Components
 import {List, ListItem} from "@mui/material";
 import Link from "next/link";
-import HeroImg from "../HeroImg/HeroImg";
+import HeroImg from "../../HeroImg/HeroImg";
 import SocialMediaInfo from "./SocialMediaInfo";
 import BusinessInfo from "./BusinessInfo";
 // Assets

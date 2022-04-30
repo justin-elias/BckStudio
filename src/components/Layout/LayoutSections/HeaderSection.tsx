@@ -4,11 +4,11 @@ import React from "react";
 import {makeStyles} from "@mui/styles";
 // Components
 import {Hidden} from "@mui/material";
-import SmallHeader from "../Headers/SmallHeader";
-import HeaderLinks from "../Headers/HeaderLinks";
+import SmallHeader from "../../Headers/SmallHeader";
+import HeaderLinks from "../../Headers/HeaderLinks";
 import MainLogo from "./MainLogo";
 import Image from "next/image";
-import LargeHeader from "../Headers/LargeHeader";
+import LargeHeader from "../../Headers/LargeHeader";
 
 /* eslint-disable no-unused-vars */
 const useStyles = makeStyles((theme) => ({

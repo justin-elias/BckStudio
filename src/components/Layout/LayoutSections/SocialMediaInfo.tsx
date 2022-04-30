@@ -2,13 +2,13 @@
 import React from "react";
 // Style
 import {makeStyles} from "@mui/styles";
-import {container, title} from "../../assets/globals";
+import {container, title} from "../../../assets/globals";
 //@ts-ignore
 import classNames from "classnames";
 // Components
 import {Typography} from "@mui/material";
-import GridContainer from "../Grid/GridContainer";
-import GridItem from "../Grid/GridItem";
+import GridContainer from "../../Grid/GridContainer";
+import GridItem from "../../Grid/GridItem";
 import Image from "next/image";
 // Assets
 
