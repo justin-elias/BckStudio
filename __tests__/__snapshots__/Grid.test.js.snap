@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridContainer /> should render children 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 makeStyles-grid-1 undefined css-1idn90j-MuiGrid-root"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<GridContainer /> should render children with custom className 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container custom-class css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 makeStyles-grid-2 undefined css-1idn90j-MuiGrid-root"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<GridContainer /> should render children with custom className and style 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container custom-class css-11lq3yg-MuiGrid-root"
+    style="background-color: red;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 makeStyles-grid-4 undefined css-1idn90j-MuiGrid-root"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<GridContainer /> should render children with custom className and style 2`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container custom-class css-11lq3yg-MuiGrid-root"
+    style="background-color: red;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 makeStyles-grid-5 undefined css-1idn90j-MuiGrid-root"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<GridContainer /> should render children with custom style 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+    style="background-color: red;"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 makeStyles-grid-3 undefined css-1idn90j-MuiGrid-root"
+    >
+      <div>
+        Test
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<GridContainer /> should render correctly 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
+  />
+</div>
+`;

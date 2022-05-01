@@ -12,7 +12,7 @@ import {List, ListItem} from "@mui/material";
 import Link from "next/link";
 import HeroImg from "../../HeroImg/HeroImg";
 import SocialMediaInfo from "./SocialMediaInfo";
-import BusinessInfo from "./BusinessInfo";
+import BusinessInfo from "../../BusinessInfo/BusinessInfo";
 // Assets
 
 const useStyles = makeStyles((theme) => ({

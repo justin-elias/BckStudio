@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BusinessInfo should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="makeStyles-dividerBar-3"
+    />
+    <div
+      aria-label="Business Info"
+      class="MuiGrid-root MuiGrid-container css-1lym95h-MuiGrid-root"
+    >
+      <div
+        aria-label="Business Hours"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 makeStyles-grid-15 undefined css-iv7vbz-MuiGrid-root"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-h3 makeStyles-title-2 makeStyles-centered-7 css-gepadz-MuiTypography-root"
+        >
+          HOURS
+        </h3>
+        <p
+          class="MuiTypography-root MuiTypography-body1 makeStyles-centered-7 css-ahj2mt-MuiTypography-root"
+        >
+           Tuesday & Wednesday 8:30AM - 5:30PM
+          <br />
+          Thursday - Saturday 9:00AM - 6:30PM
+          <br />
+          Closed Sunday & Monday
+        </p>
+      </div>
+      <div
+        aria-label="Business Address"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 makeStyles-grid-15 undefined css-iv7vbz-MuiGrid-root"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignCenter makeStyles-title-2 makeStyles-centered-7 css-47suzj-MuiTypography-root"
+        >
+          LOCATION
+        </h3>
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter makeStyles-centered-7 css-1uwgr7b-MuiTypography-root"
+        >
+          6062 Jackrabbit Lane
+          <br />
+          Belgrade, Montana 59714
+        </p>
+        <div
+          class="makeStyles-center-14"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-title-2 makeStyles-phone-12 css-d5ls3n-MuiTypography-root"
+          >
+            Phone:
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter makeStyles-phoneLink-13 css-1uwgr7b-MuiTypography-root"
+          >
+            <a
+              href="tel:+14062249229"
+            >
+               (406)224-9229
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
