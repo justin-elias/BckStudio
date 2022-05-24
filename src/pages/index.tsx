@@ -43,10 +43,8 @@ export async function getStaticProps(context: PageContextData) {
         const prodToken = process.env.NEXT_PUBLIC_GRAPHCMS_WEBCLIENT_API_TOKEN;
         const token = preview ? (context.previewData?.token + process.env.NEXT_PUBLIC_GRAPH_CMS_PREVIEW_TOKEN_CLIENT!) : prodToken;
         const endPoint = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!
-
-
         const staff: Array<StaffQuery> = await queryCMS(staffQuery, token!, endPoint);
-        console.log(JSON.stringify(staff))
+
         return {
             props: {staff, preview}, // will be passed to the page component as props
         }
