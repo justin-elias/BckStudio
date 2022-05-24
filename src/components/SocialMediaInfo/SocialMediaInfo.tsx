@@ -52,7 +52,7 @@ const SocialMediaInfo = (props: any) => {
     return (
         <React.Fragment>
             <div className={classes.container} aria-label={'Social Media Links'}>
-                <Typography variant={"h4"} className={classNames(classes.title)}>Find the Latest on Social Media</Typography>
+                <Typography variant={"h3"} className={classNames(classes.title)}>Find the Latest on Social Media</Typography>
                 <GridContainer spacing={0} justifyContent={"center"}>
                     <GridItem xs={2} sm={2} md={1} aria-label={'Facebook Link'}>
                         <a href={"https://www.facebook.com/BozemanCommunityKiln"} rel="noopener noreferrer" target={"_blank"}>
@@ -60,7 +60,7 @@ const SocialMediaInfo = (props: any) => {
                         </a>
                     </GridItem>
                     <GridItem xs={2} sm={2} md={1} aria-label={'Instagram Link'}>
-                        <a href={"https://ww`w.instagram.com/bckiln/"} rel="noopener noreferrer" target={"_blank"}>
+                        <a href={"https://www.instagram.com/bckiln/"} rel="noopener noreferrer" target={"_blank"}>
                             <Image src={"https://media.graphcms.com/pOsoM4xoSNiGPWq5d1Jg"} alt={"Follow on Instagram"} className={classes.icon} width={"40px"} height={"40px"}/>
                         </a>
                     </GridItem>
