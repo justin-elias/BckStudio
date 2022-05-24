@@ -67,7 +67,8 @@ const useStyles = makeStyles((theme) => ({
   },
   cardPlain: {
         background: "transparent",
-        boxShadow: "none"
+        boxShadow: "none",
+        marginTop: "2rem"
     },
   ...imagesStyles,
   cardTitle,
@@ -113,7 +114,7 @@ export default function AboutSection(props: any) {
              </Typography>
             <GridContainer alignItems={"flex-start"} alignContent={"center"} justifyContent={"center"}>
               <GridItem xs={12} sm={12} md={8}>
-                <Typography variant={"body1"}>
+                <Typography variant={"body1"} gutterBottom>
                 Bozeman Community Kiln invites you to come create, learn, and play with ceramic clay. Members enjoy a relaxed,
                 and collaborative atmosphere where they can be inspired to make their own projects at their own pace. The
                 experience of working in a studio, filled with unique individuals at different experience levels, fosters
