@@ -11,6 +11,7 @@ import {ButtonProps} from "@mui/material/core";
 import {containerFluid, drawerWidth, transition} from "./assets/globals";
 import theme from "./assets/theme";
 import {NextApiRequest, PreviewData} from "next";
+import {StaticImageData} from "next/image";
 
 declare module 'classnames';
 
@@ -60,8 +61,7 @@ export interface BckAppProps extends AppProps {
     whiteFont?: boolean;
 }
 
-export interface HeroImg {
-    src: string,
+export interface HeroImgProps {
     children?: ReactNode
 }
 export interface PricingProps extends BckAppProps{

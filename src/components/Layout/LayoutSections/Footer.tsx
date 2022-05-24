@@ -90,10 +90,6 @@ export default function Footer(props: BckAppProps) {
   });
     return (
         <React.Fragment>
-            {/*<HeroImg src={"../../assets/images/darkened_wheel@1x.jpg"}>*/}
-            {/*    <SocialMediaInfo/>*/}
-            {/*</HeroImg>*/}
-            <BusinessInfo/>
             <footer className={footerClasses} role={"footer"}>
               <div className={classes.container}>
                 <div className={classes.left}>

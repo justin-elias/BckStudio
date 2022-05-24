@@ -9,10 +9,14 @@ import classNames from "classnames";
 // Children
 import HeaderSection from "./LayoutSections/HeaderSection";
 import Footer from "./LayoutSections/Footer";
+import SocialMediaInfo from "../SocialMediaInfo/SocialMediaInfo";
+import BusinessInfo from "../BusinessInfo/BusinessInfo";
 //Assets
 
 const useStyles = makeStyles((theme) => ({
-
+    defaultBackground: {
+        background: "#e5e5e5"
+    },
     mainElement: {
         background: "#FFFFFF",
         zIndex: "2",
@@ -33,23 +37,26 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Layout(props: BckAppProps) {
     const classes = useStyles();
-    const {} = props
     return (
         <React.Fragment>
-            <HeaderSection />
-            <main role="main">
-                <Hidden smDown>
-                    <div className={classNames(classes.mainElement, classes.parallaxMargin)} id={"mainElement"}>
-                        {props.children}
-                    </div>
-                </Hidden>
-                <Hidden mdUp>
-                    <div className={classNames(classes.mainElement, classes.small)} id={"mainElement"}>
-                        {props.children}
-                    </div>
-                </Hidden>
-            </main>
-            <Footer {...props} />
+            <div className={classes.defaultBackground}>
+                <HeaderSection />
+                <main role="main">
+                    <Hidden smDown>
+                        <div className={classNames(classes.mainElement, classes.parallaxMargin)} id={"mainElement"}>
+                            {props.children}
+                        </div>
+                    </Hidden>
+                    <Hidden mdUp>
+                        <div className={classNames(classes.mainElement, classes.small)} id={"mainElement"}>
+                            {props.children}
+                        </div>
+                    </Hidden>
+                    <SocialMediaInfo/>
+                    <BusinessInfo/>
+                </main>
+                <Footer {...props} />
+            </div>
         </React.Fragment>
     );
 }
