@@ -46,7 +46,7 @@ export async function getStaticProps(context: PageContextData) {
 
 
         const staff: Array<StaffQuery> = await queryCMS(staffQuery, token!, endPoint);
-
+        console.log(JSON.stringify(staff))
         return {
             props: {staff, preview}, // will be passed to the page component as props
         }
