@@ -153,16 +153,22 @@ const defaultInstructorQuery =
 
 
 export async function getStaticProps(context: PageContextData) {
-    const preview= context.preview ? context.preview : null;
-    const prodToken = process.env.NEXT_PUBLIC_GRAPHCMS_WEBCLIENT_API_TOKEN;
-    const token = preview ? (context.previewData.token! + process.env.NEXT_PUBLIC_GRAPH_CMS_PREVIEW_TOKEN_CLIENT) : prodToken;
-    const endPoint = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
+    try {
+        const preview = context.preview ? context.preview : null;
+        const prodToken = process.env.NEXT_PUBLIC_GRAPHCMS_WEBCLIENT_API_TOKEN;
+        const token = preview ? (context.previewData.token! + process.env.NEXT_PUBLIC_GRAPH_CMS_PREVIEW_TOKEN_CLIENT) : prodToken;
+        const endPoint = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 
-    const classListQueryResult: ClassListResults = await queryCMS(classCategories, token!, endPoint!);
-    const defaultInstructor: DefaultInstructorQueryResults = await queryCMS(defaultInstructorQuery, token!, endPoint!);
+        const classListQueryResult: ClassListResults = await queryCMS(classCategories, token!, endPoint!);
+        const defaultInstructor: DefaultInstructorQueryResults = await queryCMS(defaultInstructorQuery, token!, endPoint!);
 
-    return {
-        props: { classListQueryResult, defaultInstructor, preview }, // will be passed to the page component as props
+        return {
+            props: {classListQueryResult, defaultInstructor, preview}, // will be passed to the page component as props
+        }
+    } catch (e) {
+        return {
+            props: {classListQueryResult: null, defaultInstructor: null, preview: false}, // will be passed to the page component as props
+        }
     }
 }
 
@@ -172,13 +178,15 @@ export default function ClassesEncounters(props: any) {
 
     const classLists = () => {
             let result: Array<ReactFragment> = [];
-            classListQueryResult.classCategories.map((category: ClassCategories) => {
-                if (category.categoryTitle !== "Encounters") {
-                    result.push(<ClassList index={nanoid()} classList={category}
-                                           key={category.categoryTitle} title={category.categoryTitle}
-                                           defaultInstructor={defaultInstructor}/>)
-                }
-            })
+            if (classListQueryResult) {
+                classListQueryResult.classCategories.map((category: ClassCategories) => {
+                    if (category.categoryTitle !== "Encounters") {
+                        result.push(<ClassList index={nanoid()} classList={category}
+                                               key={category.categoryTitle} title={category.categoryTitle}
+                                               defaultInstructor={defaultInstructor}/>)
+                    }
+                })
+            }
             return result
         }
     return (

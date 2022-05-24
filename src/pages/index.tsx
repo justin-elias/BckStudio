@@ -38,15 +38,22 @@ const staffQuery = gql`{
 }`
 
 export async function getStaticProps(context: PageContextData) {
-    const preview = context.preview ? context.preview : null;
-    const prodToken = process.env.NEXT_PUBLIC_GRAPHCMS_WEBCLIENT_API_TOKEN;
-    const token = preview ? (context.previewData?.token + process.env.NEXT_PUBLIC_GRAPH_CMS_PREVIEW_TOKEN_CLIENT!) : prodToken;
-    const endPoint = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!
+    try {
+        const preview = context.preview ? context.preview : null;
+        const prodToken = process.env.NEXT_PUBLIC_GRAPHCMS_WEBCLIENT_API_TOKEN;
+        const token = preview ? (context.previewData?.token + process.env.NEXT_PUBLIC_GRAPH_CMS_PREVIEW_TOKEN_CLIENT!) : prodToken;
+        const endPoint = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT!
 
-    const staff: Array<StaffQuery> = await queryCMS(staffQuery, token!, endPoint);
 
-    return {
-        props: { staff, preview }, // will be passed to the page component as props
+        const staff: Array<StaffQuery> = await queryCMS(staffQuery, token!, endPoint);
+
+        return {
+            props: {staff, preview}, // will be passed to the page component as props
+        }
+    } catch (e) {
+        return {
+            props: {staff: null, preview: false}, // will be passed to the page component as props        }
+        }
     }
 }
 
@@ -55,15 +62,17 @@ const Home: NextPage = (props: any) => {
     const { staff, preview } = props
 
     const shuffledStaff = () => {
-        const shuffle: Array<StaffType> = shuffleArray(staff.instructors)
-        for (let i = 0; i < shuffle.length; i++) {
-            if (shuffle[i].staffTitle === "Studio Dog" && i !== shuffle.length-1){
-                const temp = shuffle[i];
-                shuffle[i] = shuffle[shuffle.length-1]
-                shuffle[shuffle.length-1] = temp
+        if (staff !== null) {
+            const shuffle: Array<StaffType> = shuffleArray(staff.instructors)
+            for (let i = 0; i < shuffle.length; i++) {
+                if (shuffle[i].staffTitle === "Studio Dog" && i !== shuffle.length - 1) {
+                    const temp = shuffle[i];
+                    shuffle[i] = shuffle[shuffle.length - 1]
+                    shuffle[shuffle.length - 1] = temp
+                }
             }
+            return shuffle
         }
-        return shuffle
     }
   return (
     <div className={classes.container}>

@@ -69,7 +69,7 @@ export default function HeaderSection(props: any) {
             </Hidden>
             <div className={classes.banner}>
                 <Hidden smDown>
-                    <Image src={"https://media.graphcms.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} priority/>
+                    <Image src={"https://media.graphcms.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} alt={"Forming Bowl with Rib"} priority/>
                 </Hidden>
                 <Hidden mdDown>
                     <div className={classes.lgLogo}>
