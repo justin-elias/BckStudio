@@ -8,6 +8,9 @@ import {AppProps} from "next/app"
 import {Event} from "@sentry/types"
 import {ReactNode} from "react";
 import {ButtonProps} from "@mui/material/core";
+import {containerFluid, drawerWidth, transition} from "./assets/globals";
+import theme from "./assets/theme";
+import {NextApiRequest, PreviewData} from "next";
 
 declare module 'classnames';
 
@@ -93,4 +96,80 @@ export interface FaqProps extends BckAppProps{
 
 export interface MD {
     source: faq
+}
+
+export interface PagePreviewData extends PreviewData{
+    token?: string
+}
+export interface PageContextData extends NextApiRequest {
+    previewData: PagePreviewData
+}
+
+export interface ClassType extends Array<any>{
+    className: string
+    displayTitle: string
+    instructor?: {
+        firstName: string
+        lastName: string
+        headshotImage: {
+            altText: string
+            height: string
+            width: string
+            url: string
+        }
+        bio: {
+            text: string
+        }
+        instructorStatement: {
+            text: string
+        }
+    }
+    classLink: string
+    buttonText: string
+    disableBookingButton: string
+    classDescriptionList: Array<string>
+    classInfoList: Array<string>
+}
+export interface ClassCategories extends Array<any> {
+    categoryTitle: string
+        description: string
+        classes: Array<ClassType>
+}
+export interface ClassListResults {
+    classCategories?: Array<ClassCategories>
+}
+
+export interface DefaultInstructorQueryResults {
+    instructor: {
+        firstName: string
+        lastName: string
+        headshotImage: {
+            url: string
+        }
+        bio: {
+            text: string
+        }
+        instructorStatement: {
+            text: string
+        }
+    }
+}
+
+export interface StaffType {
+    firstName: string
+    lastName: string
+    staffBio:{
+        text:string
+    },
+    staffPicture:{
+        title: string
+        altText: string
+        height: string
+        width: string
+        url: string
+    },
+    staffTitle: string
+}
+export interface StaffQuery {
+    instructors: Array<StaffType>
 }

@@ -11,7 +11,7 @@ import {container} from "../../../assets/globals";
 import {List, ListItem} from "@mui/material";
 import Link from "next/link";
 import HeroImg from "../../HeroImg/HeroImg";
-import SocialMediaInfo from "./SocialMediaInfo";
+import SocialMediaInfo from "../../SocialMediaInfo/SocialMediaInfo";
 import BusinessInfo from "../../BusinessInfo/BusinessInfo";
 // Assets
 
@@ -94,7 +94,7 @@ export default function Footer(props: BckAppProps) {
             {/*    <SocialMediaInfo/>*/}
             {/*</HeroImg>*/}
             <BusinessInfo/>
-            <footer className={footerClasses} role={"contentinfo"}>
+            <footer className={footerClasses} role={"footer"}>
               <div className={classes.container}>
                 <div className={classes.left}>
                   <List className={classes.list}>
@@ -134,4 +134,4 @@ export default function Footer(props: BckAppProps) {
             </footer>
         </React.Fragment>
     );
-}
+};

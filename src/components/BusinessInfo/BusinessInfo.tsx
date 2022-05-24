@@ -71,7 +71,7 @@ export default function BusinessInfo(props: any) {
                 </GridItem>
                 <Hidden smDown>
                     <div className={classes.vertCones}>
-                        <Image src={"https://media.graphcms.com/hfaJUnYBRIC8AySsGbkB"} alt={"Vertical divider which shows temperature cones at various stages of drooping"} height={"160"} width={"12"}/>
+                        <Image src={"https://media.graphcms.com/hfaJUnYBRIC8AySsGbkB"} alt={"Vertical divider which shows temperature cones at various stages of drooping"} height={"160"} width={"12"} unoptimized/>
                     </div>
                 </Hidden>
                 <Hidden mdUp>

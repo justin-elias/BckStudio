@@ -12,6 +12,7 @@ import PageChange from "../components/PageChange/PageChange";
 import * as Sentry from "@sentry/nextjs"
 import { BckAppProps } from "../index";
 import Layout from "../components/Layout/Layout";
+import {ErrorBoundary} from "@sentry/nextjs";
 
 if (process.env.NODE_ENV === "production") {
     Sentry.init({dsn: process.env.NEXT_PUBLIC_SENTRY_DSN});
@@ -63,9 +64,11 @@ export default function App(props: BckAppProps) {
               <link href="https://fonts.googleapis.com/css2?family=Asap:wght@600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet"/>
           </Head>
           <ThemeProvider theme={theme}>
+              <ErrorBoundary>
               <Layout {...pageProps} err={err}>
-                <Component />
+                <Component {...pageProps}/>
               </Layout>
+            </ErrorBoundary>
           </ThemeProvider>
       </React.Fragment>
     );

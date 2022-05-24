@@ -11,9 +11,7 @@ import HeaderSection from "./LayoutSections/HeaderSection";
 import Footer from "./LayoutSections/Footer";
 //Assets
 
-/* eslint-disable no-unused-vars */
 const useStyles = makeStyles((theme) => ({
-        /* eslint-enable no-unused-vars */
 
     mainElement: {
         background: "#FFFFFF",
@@ -32,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
         margin: "-3.75rem 0rem 0rem",
     }
 }));
-
 
 export default function Layout(props: BckAppProps) {
     const classes = useStyles();
