@@ -10,9 +10,6 @@ import {container} from "../../../assets/globals";
 // Components
 import {List, ListItem} from "@mui/material";
 import Link from "next/link";
-import HeroImg from "../../HeroImg/HeroImg";
-import SocialMediaInfo from "../../SocialMediaInfo/SocialMediaInfo";
-import BusinessInfo from "../../BusinessInfo/BusinessInfo";
 // Assets
 
 const useStyles = makeStyles((theme) => ({
@@ -89,13 +86,13 @@ export default function Footer(props: BckAppProps) {
     [classes.footerWhiteFont]: whiteFont
   });
     return (
-        <React.Fragment>
-            <footer className={footerClasses} role={"footer"}>
+        <div>
+            <footer className={footerClasses} role={"contentinfo"}>
               <div className={classes.container}>
                 <div className={classes.left}>
                   <List className={classes.list}>
                     <ListItem className={classes.inlineBlock}>
-                      <Link href={"/memberships"}>
+                      <Link href={"/memberships/"} passHref>
                         <a
                             className={classes.block}
                         >
@@ -104,16 +101,12 @@ export default function Footer(props: BckAppProps) {
                         </Link>
                       </ListItem>
                       <ListItem className={classes.inlineBlock}>
-                        <Link href={"/classes-encounters"} passHref>
-                        <a
-                          className={classes.block}
-                        >
-                          Classes & Encounters
-                        </a>
+                        <Link href={"/classes-encounters/"} passHref >
+                            <a className={classes.block}>Classes</a>
                         </Link>
                       </ListItem>
                     <ListItem className={classes.inlineBlock}>
-                      <Link href={"/contact"} passHref>
+                      <Link href={"/contact/"} passHref>
                         <a
                             className={classes.block}
                         >
@@ -128,6 +121,6 @@ export default function Footer(props: BckAppProps) {
                   </div>
                 </div>
             </footer>
-        </React.Fragment>
+        </div>
     );
 };
