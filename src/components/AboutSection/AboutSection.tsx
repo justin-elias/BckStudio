@@ -134,7 +134,7 @@ export default function AboutSection(props: any) {
                     <GridItem xs={12} sm={12} md={6}
                               // @ts-ignore
                               className={classes.itemGrid}>
-                      <Image src={person.staffPicture.url} width={width} height={height} alt={person.staffPicture.altText} title={person.staffPicture.title} className={imageClasses} placeholder={"blur"} blurDataURL={"public/blurDefault.png"}/>
+                      <Image src={person.staffPicture.url} width={width} height={height} alt={person.staffPicture.altText} title={person.staffPicture.title} className={imageClasses} placeholder={"blur"} blurDataURL={"../assets/images/blurDefault.png"}/>
                     </GridItem>
                     <Typography variant={"h4"}
                         // @ts-ignore
