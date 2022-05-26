@@ -46,9 +46,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const SocialMediaInfo = (props: any) => {
+const SocialMediaInfo = () => {
     const classes = useStyles();
-    const {} = props
+
     return (
         <React.Fragment>
             <div className={classes.container} aria-label={'Social Media Links'}>

@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
   playBrand
 }));
 
-export default function CLPSection(props: any) {
+export default function CLPSection() {
     const classes = useStyles();
-    const {} = props
+
     return (
         <React.Fragment>
             <GridContainer alignItems={"flex-start"} justifyContent={"center"} className={classes.gridContainer}>

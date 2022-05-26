@@ -56,8 +56,8 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-export default function BusinessInfo(props: any) {
-    const classes = useStyles(props);
+export default function BusinessInfo() {
+    const classes = useStyles();
     return (
         <div>
             <div className={classes.dividerBar}/>

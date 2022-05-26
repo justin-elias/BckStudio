@@ -33,9 +33,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function HeaderLinks(props: any) {
+export default function HeaderLinks() {
     const classes = useStyles();
-    const {} = props
+
     return (
         <React.Fragment>
             <nav role="navigation">
