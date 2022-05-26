@@ -67,7 +67,7 @@ export default function HeaderSection(props: any) {
             </Hidden>
             <div className={classes.banner}>
                 <Hidden smDown>
-                    <Image src={"https://media.graphassets.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} alt={"Forming Bowl with Rib"} placeholder={"blur"} blurDataURL={"/1x1-005e5e7f.png"} priority/>
+                    <Image src={"https://media.graphassets.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} alt={"Forming Bowl with Rib"} placeholder={"blur"} blurDataURL={"/1x1-e5e5e5ff.png"} priority/>
                 </Hidden>
                 <Hidden mdDown>
                     <div className={classes.lgLogo}>
