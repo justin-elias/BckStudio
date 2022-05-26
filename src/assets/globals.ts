@@ -303,7 +303,6 @@ const headerLinksStyle = {
   },
   icons: {
     width: "1.25em",
-    height: "1.25em",
     marginRight: "0.188em"
   },
   socialIcons: {
