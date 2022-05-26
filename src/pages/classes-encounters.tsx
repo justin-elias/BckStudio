@@ -198,6 +198,7 @@ export default function ClassesEncounters(props: any) {
                       content="Join us for one of our classes to learn a variety of pottery techniques from local artists, or try our clay encounters, a one-time visit great for playing with clay."/>
             </Head>
             <ShowPreview preview={preview} page={"classes-encounters"}/>
+            <main role={"main"}>
                 <BrandedHeader>
                     <Typography variant={"h1"} align={"center"} className={classNames(classes.brandFont)} gutterBottom>
                         LEARN.
@@ -209,6 +210,7 @@ export default function ClassesEncounters(props: any) {
                     </div>
                 </BrandedHeader>
                 {classLists()}
+            </main>
         </React.Fragment>
     );
 }

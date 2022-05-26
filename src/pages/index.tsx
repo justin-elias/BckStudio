@@ -83,10 +83,12 @@ const Home: NextPage = (props: any) => {
             />
         </Head>
         <ShowPreview preview={preview} page={""}/>
-        <BrandedHeader>
-            <CLPSection/>
-        </BrandedHeader>
-        <AboutSection staff={shuffledStaff()}/>
+        <main role={"main"}>
+            <BrandedHeader>
+                <CLPSection/>
+            </BrandedHeader>
+            <AboutSection staff={shuffledStaff()}/>
+        </main>
     </div>
   )
 }

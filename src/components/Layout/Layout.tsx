@@ -40,7 +40,6 @@ export default function Layout(props: BckAppProps) {
         <React.Fragment>
             <div className={classes.defaultBackground}>
                 <HeaderSection />
-                <main role="main">
                     <Hidden smDown>
                         <div className={classNames(classes.mainElement)} id={"mainElement"}>
                             {props.children}
@@ -53,7 +52,6 @@ export default function Layout(props: BckAppProps) {
                     </Hidden>
                     <SocialMediaInfo/>
                     <BusinessInfo/>
-                </main>
                 <Footer {...props} />
             </div>
         </React.Fragment>
