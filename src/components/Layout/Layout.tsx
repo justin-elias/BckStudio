@@ -27,13 +27,12 @@ const useStyles = makeStyles(() => ({
         borderRadius: "0.375rem",
         boxShadow: "0 1rem 1.5rem 0.125rem rgba(0, 0, 0, 0.14), 0 0.375rem 1.875rem 0.313rem rgba(0, 0, 0, 0.12), 0 0.5rem 0.625rem -0.313rem rgba(0, 0, 0, 0.2)"
     },
-    footerElement: {
-        position: "relative",
-        margin: "auto",
-    },
     small: {
         margin: "-3.75rem 0rem 0rem",
     },
+    reservedSpace: {
+        minHeight: "100vh",
+    }
 }));
 
 export default function Layout(props: BckAppProps) {
@@ -41,6 +40,7 @@ export default function Layout(props: BckAppProps) {
     return (
         <React.Fragment>
             <div className={classes.defaultBackground}>
+                <div className={classes.reservedSpace}>
                     <HeaderSection />
                     <Hidden smDown>
                         <div className={classNames(classes.mainElement)} id={"mainElement"}>
@@ -52,11 +52,10 @@ export default function Layout(props: BckAppProps) {
                             {props.children}
                         </div>
                     </Hidden>
-                {/*<div className={classes.footerElement}>*/}
-                {/*    <SocialMediaInfo/>*/}
-                {/*    <BusinessInfo/>*/}
-                {/*    <Footer {...props} />*/}
-                {/*</div>*/}
+                </div>
+                <SocialMediaInfo/>
+                <BusinessInfo/>
+                <Footer {...props} />
             </div>
         </React.Fragment>
     );
