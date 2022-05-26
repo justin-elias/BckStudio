@@ -27,6 +27,10 @@ const useStyles = makeStyles(() => ({
         borderRadius: "0.375rem",
         boxShadow: "0 1rem 1.5rem 0.125rem rgba(0, 0, 0, 0.14), 0 0.375rem 1.875rem 0.313rem rgba(0, 0, 0, 0.12), 0 0.5rem 0.625rem -0.313rem rgba(0, 0, 0, 0.2)"
     },
+    footerElement: {
+        position: "relative",
+        margin: "auto",
+    },
     small: {
         margin: "-3.75rem 0rem 0rem",
     },
@@ -53,9 +57,11 @@ export default function Layout(props: BckAppProps) {
                         </div>
                     </Hidden>
                 </div>
-                <SocialMediaInfo/>
-                <BusinessInfo/>
-                <Footer {...props} />
+                <div className={classes.footerElement}>
+                    <SocialMediaInfo/>
+                    <BusinessInfo/>
+                    <Footer {...props} />
+                </div>
             </div>
         </React.Fragment>
     );
