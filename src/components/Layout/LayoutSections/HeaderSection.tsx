@@ -34,7 +34,7 @@ export default function HeaderSection(props: any) {
             <Hidden mdDown>
             <LargeHeader
                 color="transparent"
-                rightLinks={<HeaderLinks role={"navigation"}/>}
+                rightLinks={<HeaderLinks/>}
                 fixed
                 changeColorOnScroll={noParallax === undefined ? {
                     height: 50,
@@ -49,7 +49,7 @@ export default function HeaderSection(props: any) {
             <Hidden smUp>
                 <SmallHeader
                     color="white"
-                    rightLinks={<HeaderLinks role={"navigation"}/>}
+                    rightLinks={<HeaderLinks/>}
                     fixed
                     size={"xs"}
                     {...rest}
@@ -59,14 +59,14 @@ export default function HeaderSection(props: any) {
             <Hidden lgUp xsDown>
                 <SmallHeader
                     color="white"
-                    rightLinks={<HeaderLinks role={"navigation"}/>}
+                    rightLinks={<HeaderLinks/>}
                     fixed
                     {...rest}
                 />
             </Hidden>
             <div className={classes.banner}>
                 <Hidden smDown>
-                    <Image src={"https://media.graphassets.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} alt={"Forming Bowl with Rib"} placeholder={"blur"} blurDataURL={"../../assets/images/1x1-005e5e7f.png"} priority/>
+                    <Image src={"https://media.graphassets.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} alt={"Forming Bowl with Rib"} placeholder={"blur"} blurDataURL={"/1x1-005e5e7f.png"} priority/>
                 </Hidden>
                 <Hidden mdDown>
                     <div className={classes.lgLogo}>
