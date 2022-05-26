@@ -53,9 +53,9 @@ export default function Layout(props: BckAppProps) {
                         </div>
                     </Hidden>
                 </div>
-                <SocialMediaInfo/>
-                <BusinessInfo/>
-                <Footer {...props} />
+                {/*<SocialMediaInfo/>*/}
+                {/*<BusinessInfo/>*/}
+                {/*<Footer {...props} />*/}
             </div>
         </React.Fragment>
     );
