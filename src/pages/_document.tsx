@@ -7,7 +7,7 @@ import React from "react";
 import theme from "../assets/theme";
 
 export default function Document() {
-  return (
+    return (
     <Html lang="en">
         <Head>
             <link rel="apple-touch-icon" sizes="180x180" href={"/apple-touch-icon.png"}/>
@@ -19,8 +19,12 @@ export default function Document() {
             <meta name="theme-color" content="#ffffff"/>
             <meta httpEquiv="Content-Type" content="text/html" charSet="utf-8"/>
             <meta name="theme-color" content={theme.palette?.primary?.main} />
-            <link href="https://fonts.googleapis.com/css2?family=Asap:wght@600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:wght@800&display=swap"
-                  rel="stylesheet"/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com"
+                      crossOrigin={"true"}/>
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=Asap:wght@600;700&family=Lato:ital,wght@1,400;1,700&family=Merriweather+Sans:wght@800&display=optional"
+                        rel="stylesheet"/>
         </Head>
       <body>
         <Main />
