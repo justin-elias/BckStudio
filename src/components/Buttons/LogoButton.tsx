@@ -4,10 +4,6 @@
 
 // Core
 import React from "react";
-// Style
-import {makeStyles} from "@mui/styles";
-//@ts-ignore
-import classNames from "classnames";
 //Components
 import {Button} from "@mui/material";
 import Image from "next/image";

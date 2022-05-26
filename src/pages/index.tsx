@@ -12,7 +12,7 @@ import AboutSection from "../components/AboutSection/AboutSection";
 import {ShowPreview} from "../components/ShowPreview/ShowPreview";
 import React from "react";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     container,
     title,
     mainElement

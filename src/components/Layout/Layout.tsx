@@ -13,7 +13,7 @@ import SocialMediaInfo from "../SocialMediaInfo/SocialMediaInfo";
 import BusinessInfo from "../BusinessInfo/BusinessInfo";
 //Assets
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     defaultBackground: {
         background: "#e5e5e5"
     },

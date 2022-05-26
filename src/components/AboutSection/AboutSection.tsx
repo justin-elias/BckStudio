@@ -20,7 +20,7 @@ import {StaffType} from "../../index";
 // Assets
 
 // @ts-ignore
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     inlineType: {
     display: "inline"
   },

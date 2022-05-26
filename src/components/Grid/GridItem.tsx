@@ -9,7 +9,7 @@ import {Grid, GridProps} from "@mui/material";
 // Assets
 
 /* eslint-disable no-unused-vars */
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     /* eslint-enable no-unused-vars */
 
     grid: {
