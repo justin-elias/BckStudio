@@ -18,6 +18,8 @@ const useStyles = makeStyles(() => ({
         background: "#e5e5e5"
     },
     mainElement: {
+        height: "100%",
+        width: "100%",
         background: "#FFFFFF",
         zIndex: "2",
         position: "relative",
