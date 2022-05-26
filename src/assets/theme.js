@@ -72,28 +72,28 @@ const themeBase = createTheme({
 const theme = responsiveFontSizes(themeBase);
     theme.typography.h1 = {
         fontSize: "3rem",
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints?.up("md")]: {
             fontSize: "3rem",
         },
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints?.down("xs")]: {
             fontSize: "2rem",
         },
     };
     theme.typography.h2 = {
     fontSize: "2.25rem",
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints?.down("xs")]: {
         fontSize: "1.5rem",
         },
     };
     theme.typography.h3 = {
         fontSize: "1.755rem",
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints?.down("xs")]: {
             fontSize: "1.17rem",
         },
     };
     theme.typography.h4 = {
         fontSize: "1.125rem",
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints?.down("xs")]: {
             fontSize: "0.75rem",
         },
     }
