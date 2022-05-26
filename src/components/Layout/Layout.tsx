@@ -17,12 +17,10 @@ const useStyles = makeStyles(() => ({
     defaultBackground: {
         background: "#e5e5e5",
         position: "relative",
-        minHeight: "100vh",
     },
     mainElement: {
         margin: "auto",
         maxWidth: "1442px",
-        minHeight: "100vh",
         background: "#FFFFFF",
         zIndex: "2",
         position: "relative",
@@ -31,6 +29,9 @@ const useStyles = makeStyles(() => ({
     },
     small: {
         margin: "-3.75rem 0rem 0rem",
+    },
+    reservedSpace: {
+        minHeight: "100vh",
     }
 }));
 
@@ -39,7 +40,8 @@ export default function Layout(props: BckAppProps) {
     return (
         <React.Fragment>
             <div className={classes.defaultBackground}>
-                <HeaderSection />
+                <div className={classes.reservedSpace}>
+                    <HeaderSection />
                     <Hidden smDown>
                         <div className={classNames(classes.mainElement)} id={"mainElement"}>
                             {props.children}
@@ -50,8 +52,9 @@ export default function Layout(props: BckAppProps) {
                             {props.children}
                         </div>
                     </Hidden>
-                    <SocialMediaInfo/>
-                    <BusinessInfo/>
+                </div>
+                <SocialMediaInfo/>
+                <BusinessInfo/>
                 <Footer {...props} />
             </div>
         </React.Fragment>

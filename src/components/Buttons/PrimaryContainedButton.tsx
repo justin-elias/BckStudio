@@ -41,7 +41,9 @@ const PrimaryContainedButton = (props: ButtonProps) => {
     return (
         <React.Fragment>
              < // @ts-ignore
-                 Button {...rest} className={classes.root} variant={"contained"} color={"primary"} size={size} href={href}/>
+                 Button {...rest}
+                        className={classes.root}
+                        variant={"contained"} color={"primary"} size={size} href={href}/>
             </React.Fragment>
     );
 };

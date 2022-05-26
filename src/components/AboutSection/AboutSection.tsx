@@ -130,7 +130,8 @@ export default function AboutSection(props: any) {
                 <GridItem xs={12} sm={12} md={6} key={nanoid()}>
                   <Card
                       // @ts-ignore
-                      classes={{root: classes.cardPlain}}>
+                      classes={{root: classes.cardPlain}}
+                      >
                     <GridItem xs={12} sm={12} md={6}
                               // @ts-ignore
                               className={classes.itemGrid}>
