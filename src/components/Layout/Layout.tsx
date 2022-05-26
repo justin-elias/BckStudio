@@ -16,7 +16,8 @@ import BusinessInfo from "../BusinessInfo/BusinessInfo";
 const useStyles = makeStyles(() => ({
     defaultBackground: {
         background: "#e5e5e5",
-        position: "relative"
+        position: "relative",
+        minHeight: "100vh",
     },
     mainElement: {
         margin: "auto",
