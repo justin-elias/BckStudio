@@ -16,13 +16,13 @@ import BusinessInfo from "../BusinessInfo/BusinessInfo";
 const useStyles = makeStyles(() => ({
     defaultBackground: {
         background: "#e5e5e5",
-        position: "relative"
+        position: "relative",
+        minHeight: "100vh",
     },
     mainElement: {
         margin: "auto",
         maxWidth: "1442px",
-        height: "100%",
-        width: "100%",
+        minHeight: "100vh",
         background: "#FFFFFF",
         zIndex: "2",
         position: "relative",
