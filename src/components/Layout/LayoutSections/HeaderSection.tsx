@@ -12,6 +12,7 @@ import LargeHeader from "../../Headers/LargeHeader";
 const useStyles = makeStyles(() => ({
     banner: {
         maxWidth: "1442px",
+        height: "100%",
         margin: "auto"
     },
     lgLogo: {

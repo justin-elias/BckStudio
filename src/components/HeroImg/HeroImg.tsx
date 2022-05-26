@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundRepeat: " no-repeat",
         //@ts-ignore
         [theme.breakpoints?.up("md")]: {
-            minHeight: "450 px"
+            minHeight: "450 px",
+            maxWidth: "1442px",
         },
     },
 }));
