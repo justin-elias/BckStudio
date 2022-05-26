@@ -10,13 +10,13 @@ import LogoButton from "../Buttons/LogoButton";
 // Assets
 
 // @ts-ignore
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     ...headerStyle
 }));
 
 export default function LargeHeader(props: any) {
     const classes = useStyles();
-    const {} = props
+    const {changeColorOnScroll} = props
 
     useEffect(() => {
 
@@ -31,8 +31,7 @@ export default function LargeHeader(props: any) {
       });
 
   const headerColorChange = () => {
-    const {changeColorOnScroll} = props;
-    const windowsScrollTop = window.pageYOffset;
+    const windowsScrollTop = window.scrollY;
       if (windowsScrollTop > changeColorOnScroll.height) {
         document.body
             .getElementsByTagName("header")[0]

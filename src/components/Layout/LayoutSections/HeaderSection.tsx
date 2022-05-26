@@ -9,10 +9,7 @@ import HeaderLinks from "../../Headers/HeaderLinks";
 import MainLogo from "./MainLogo";
 import Image from "next/image";
 import LargeHeader from "../../Headers/LargeHeader";
-import src from "../../assets/images/1x1-005e5e7f.png"
-/* eslint-disable no-unused-vars */
-const useStyles = makeStyles((theme) => ({
-    /* eslint-enable no-unused-vars */
+const useStyles = makeStyles(() => ({
     banner: {
         maxWidth: "1442px",
         margin: "auto"

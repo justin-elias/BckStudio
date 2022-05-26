@@ -12,9 +12,7 @@ import {Hidden, Typography} from "@mui/material";
 import Image from "next/image";
 // Assets
 
-/* eslint-disable no-unused-vars */
-const useStyles = makeStyles((theme) => ({
-    /* eslint-enable no-unused-vars */
+const useStyles = makeStyles(() => ({
 
     container,
     title,
