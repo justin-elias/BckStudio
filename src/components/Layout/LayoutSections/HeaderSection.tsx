@@ -9,7 +9,7 @@ import HeaderLinks from "../../Headers/HeaderLinks";
 import MainLogo from "./MainLogo";
 import Image from "next/image";
 import LargeHeader from "../../Headers/LargeHeader";
-
+import src from "../../assets/images/1x1-005e5e7f.png"
 /* eslint-disable no-unused-vars */
 const useStyles = makeStyles((theme) => ({
     /* eslint-enable no-unused-vars */
@@ -69,7 +69,7 @@ export default function HeaderSection(props: any) {
             </Hidden>
             <div className={classes.banner}>
                 <Hidden smDown>
-                    <Image src={"https://media.graphcms.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} alt={"Forming Bowl with Rib"} placeholder={"blur"} blurDataURL={"../assets/images/1x1-005e5e7f.png"} priority/>
+                    <Image src={"https://media.graphassets.com/0dKLkonoS7Kw0RXSJhRV"} width={"1442"} height={"450"} alt={"Forming Bowl with Rib"} placeholder={"blur"} blurDataURL={"../../assets/images/1x1-005e5e7f.png"} priority/>
                 </Hidden>
                 <Hidden mdDown>
                     <div className={classes.lgLogo}>
