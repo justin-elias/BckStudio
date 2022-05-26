@@ -15,9 +15,12 @@ import BusinessInfo from "../BusinessInfo/BusinessInfo";
 
 const useStyles = makeStyles(() => ({
     defaultBackground: {
-        background: "#e5e5e5"
+        background: "#e5e5e5",
+        position: "relative"
     },
     mainElement: {
+        margin: "auto",
+        maxWidth: "1442px",
         height: "100%",
         width: "100%",
         background: "#FFFFFF",
@@ -25,12 +28,6 @@ const useStyles = makeStyles(() => ({
         position: "relative",
         borderRadius: "0.375rem",
         boxShadow: "0 1rem 1.5rem 0.125rem rgba(0, 0, 0, 0.14), 0 0.375rem 1.875rem 0.313rem rgba(0, 0, 0, 0.12), 0 0.5rem 0.625rem -0.313rem rgba(0, 0, 0, 0.2)"
-    },
-    parallaxMargin: {
-        margin: "-3.75rem 5rem 2.5rem",
-    },
-    noParallaxMargin: {
-        margin: "15rem 5rem 2.5rem",
     },
     small: {
         margin: "-3.75rem 0rem 0rem",
@@ -45,7 +42,7 @@ export default function Layout(props: BckAppProps) {
                 <HeaderSection />
                 <main role="main">
                     <Hidden smDown>
-                        <div className={classNames(classes.mainElement, classes.parallaxMargin)} id={"mainElement"}>
+                        <div className={classNames(classes.mainElement)} id={"mainElement"}>
                             {props.children}
                         </div>
                     </Hidden>

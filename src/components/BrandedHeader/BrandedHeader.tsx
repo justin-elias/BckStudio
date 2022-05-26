@@ -17,7 +17,6 @@ import {brandFont} from "../../assets/globals";
 const useStyles = makeStyles((theme) => ({
     outerBox: {
         width: "100%",
-        marginLeft: "-0.9rem"
     },
     mainContentRaised: {
         zIndex: "3",
