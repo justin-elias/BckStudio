@@ -4,6 +4,7 @@
 
 import { Html, Head, Main, NextScript } from 'next/document'
 import React from "react";
+import theme from "../assets/theme";
 
 export default function Document() {
   return (
@@ -17,6 +18,7 @@ export default function Document() {
             <meta name="msapplication-TileColor" content="#00aba9"/>
             <meta name="theme-color" content="#ffffff"/>
             <meta httpEquiv="Content-Type" content="text/html" charSet="utf-8"/>
+            <meta name="theme-color" content={theme.palette?.primary?.main} />
             <link href="https://fonts.googleapis.com/css2?family=Asap:wght@600;700&family=Lato:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:wght@800&display=swap"
                   rel="stylesheet"/>
         </Head>
