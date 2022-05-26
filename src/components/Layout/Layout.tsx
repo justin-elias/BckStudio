@@ -30,9 +30,6 @@ const useStyles = makeStyles(() => ({
     small: {
         margin: "-3.75rem 0rem 0rem",
     },
-    reservedSpace: {
-        minHeight: "100vh",
-    }
 }));
 
 export default function Layout(props: BckAppProps) {
@@ -40,7 +37,6 @@ export default function Layout(props: BckAppProps) {
     return (
         <React.Fragment>
             <div className={classes.defaultBackground}>
-                <div className={classes.reservedSpace}>
                     <HeaderSection />
                     <Hidden smDown>
                         <div className={classNames(classes.mainElement)} id={"mainElement"}>
@@ -56,7 +52,6 @@ export default function Layout(props: BckAppProps) {
                 {/*<SocialMediaInfo/>*/}
                 {/*<BusinessInfo/>*/}
                 {/*<Footer {...props} />*/}
-            </div>
         </React.Fragment>
     );
 }
