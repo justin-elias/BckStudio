@@ -57,11 +57,11 @@ export default function Layout(props: BckAppProps) {
                         </div>
                     </Hidden>
                 </div>
-                <div className={classes.footerElement}>
-                    <SocialMediaInfo/>
-                    <BusinessInfo/>
-                    <Footer {...props} />
-                </div>
+                {/*<div className={classes.footerElement}>*/}
+                {/*    <SocialMediaInfo/>*/}
+                {/*    <BusinessInfo/>*/}
+                {/*    <Footer {...props} />*/}
+                {/*</div>*/}
             </div>
         </React.Fragment>
     );
