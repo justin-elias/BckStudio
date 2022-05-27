@@ -10,21 +10,16 @@ const transition = {
     transition: "all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)"
 };
 const containerFluid = {
-  paddingRight: "0.938em",
-  paddingLeft: "0.938em",
-  marginRight: "auto",
-  marginLeft: "auto",
-  width: "100%"
+    paddingRight: "0.938em",
+    paddingLeft: "0.938em",
+    marginRight: "auto",
+    marginLeft: "auto",
+    width: "100%",
+    height: "100%"
 };
 const container = {
   ...containerFluid,
-  [theme.breakpoints.down("sm")]: {
-    maxWidth: "100vw"
-  },
-  [theme.breakpoints.only("md")]: {
-    maxWidth: "100vw"
-  },
-  [theme.breakpoints.only("lg")]: {
+  [theme.breakpoints.down("lg")]: {
     maxWidth: "100vw"
   },
   [theme.breakpoints.only("xl")]: {
@@ -157,7 +152,7 @@ const title = {
   marginBottom: "1rem",
   marginTop: "2rem",
   textDecoration: "none",
-  color: theme.palette.primary.main,
+  color: theme.palette?.primary?.main,
   fontWeight: "bold",
   fontFamily: 'Asap, sans-serif'
 };

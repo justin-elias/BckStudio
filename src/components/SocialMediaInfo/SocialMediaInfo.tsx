@@ -10,23 +10,27 @@ import {Typography} from "@mui/material";
 import GridContainer from "../Grid/GridContainer";
 import GridItem from "../Grid/GridItem";
 import Image from "next/image";
+import theme from "../../assets/theme";
 // Assets
 
 const useStyles = makeStyles((theme) => ({
 
     container: {
+        ...container,
         zIndex: "12",
-        color: "#FFFFFF",
         textAlign: "center",
-        ...container
+
     },
-    title: {
-        ...title,
+    socialMediaTitle: {
+        margin: "1.75rem 0 0.875rem",
+        marginBottom: "1rem",
+        marginTop: "2rem",
+        textDecoration: "none",
+        fontWeight: "bold",
+        fontFamily: 'Asap, sans-serif',
         display: "inline-block",
         position: "relative",
         color: "#FFFFFF",
-        fontWeight: "bold",
-        fontFamily: 'Asap, sans-serif',
         textShadow: "2px 2px 4px #000000",
         //@ts-ignore
         [theme.breakpoints?.up('md')]: {
@@ -46,13 +50,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const SocialMediaInfo = () => {
+export default function SocialMediaInfo() {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <div className={classes.container} aria-label={'Social Media Links'}>
-                <Typography variant={"h3"} className={classNames(classes.title)}>Find the Latest on Social Media</Typography>
+                <Typography variant={"h3"} className={classes.socialMediaTitle} >Find the Latest on Social Media</Typography>
                 <GridContainer spacing={0} justifyContent={"center"}>
                     <GridItem xs={2} sm={2} md={1} aria-label={'Facebook Link'}>
                         <a href={"https://www.facebook.com/BozemanCommunityKiln"} rel="noopener noreferrer" target={"_blank"}>
@@ -70,4 +74,3 @@ const SocialMediaInfo = () => {
     );
 }
 
-export default SocialMediaInfo;

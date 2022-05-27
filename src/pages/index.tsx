@@ -55,7 +55,7 @@ export async function getStaticProps(context: PageContextData) {
     }
 }
 
-const Home: NextPage = (props: any) => {
+export default function Home (props: any) {
     const classes = useStyles()
     const { staff, preview } = props
 
@@ -93,4 +93,3 @@ const Home: NextPage = (props: any) => {
   )
 }
 
-export default Home

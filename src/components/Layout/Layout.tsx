@@ -33,6 +33,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 export default function Layout(props: BckAppProps) {
+    const {children} = props;
     const classes = useStyles();
     return (
         <React.Fragment>
@@ -40,16 +41,17 @@ export default function Layout(props: BckAppProps) {
                     <HeaderSection />
                     <Hidden smDown>
                         <div className={classNames(classes.mainElement)} id={"mainElement"}>
-                            {props.children}
+                            {children}
                         </div>
                     </Hidden>
                     <Hidden mdUp>
                         <div className={classNames(classes.mainElement, classes.small)} id={"mainElement"}>
-                            {props.children}
+                            {children}
                         </div>
                     </Hidden>
+                <SocialMediaInfo/>
                 </div>
-                {/*<SocialMediaInfo/>*/}
+
                 {/*<BusinessInfo/>*/}
                 {/*<Footer {...props} />*/}
         </React.Fragment>
