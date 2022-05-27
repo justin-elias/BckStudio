@@ -13,6 +13,13 @@ import * as Sentry from "@sentry/nextjs"
 import { BckAppProps } from "../index";
 import Layout from "../components/Layout/Layout";
 import {ErrorBoundary} from "@sentry/nextjs";
+import { CacheProvider } from '@emotion/react';
+import createEmotionCache from '../assets/createEmotionCache';
+import CssBaseline from '@mui/material/CssBaseline';
+
+
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
 
 if (process.env.NODE_ENV === "production") {
     Sentry.init({dsn: process.env.NEXT_PUBLIC_SENTRY_DSN});
@@ -38,7 +45,7 @@ Router.events.on("routeChangeError", () => {
 });
 
 export default function App(props: BckAppProps) {
-    const { Component, pageProps, err } = props;
+    const { Component, pageProps, err, emotionCache = clientSideEmotionCache, } = props;
     const [path, setPath] = useState()
 
     useEffect(() => {
@@ -46,21 +53,24 @@ export default function App(props: BckAppProps) {
             // @ts-ignore
             setPath(window.location.pathname);
         }
-    })
+    }, [path])
 
     return (
       <React.Fragment>
-          <Head>
-              <meta name="viewport" content="initial-scale=1, width=device-width" />
-              <title>Bozeman Community Kiln • BCKstudio.com</title>
-          </Head>
+          <CacheProvider value={emotionCache}>
+              <Head>
+                  <meta name="viewport" content="initial-scale=1, width=device-width" />
+                  <title>Bozeman Community Kiln • BCKstudio.com</title>
+              </Head>
               <ThemeProvider theme={theme}>
+                  <CssBaseline />
                   <ErrorBoundary>
                   <Layout {...pageProps} err={err}>
                     <Component {...pageProps}/>
                   </Layout>
                 </ErrorBoundary>
               </ThemeProvider>
+          </CacheProvider>
       </React.Fragment>
     );
 }

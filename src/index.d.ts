@@ -59,6 +59,7 @@ export interface BckAppProps extends AppProps {
     user?: BckUser;
     preview?: boolean;
     whiteFont?: boolean;
+    emotionCache?: EmotionCache;
 }
 
 export interface HeroImgProps {
